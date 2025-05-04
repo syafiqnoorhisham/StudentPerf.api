@@ -1,0 +1,25 @@
+@hostname = localhost
+@port = 7119
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+### Get all performances
+GET https://{{host}}/api/performance
+
+### Get performances with search
+GET https://{{host}}/api/performance?search=database
+
+### Get performances with course filter
+GET https://{{host}}/api/performance?course=1
+
+### Get performances with subject filter
+GET https://{{host}}/api/performance?subject=1
+
+### Get performances with pagination
+GET https://{{host}}/api/performance?page=2&pageSize=5
+
+### Get performances with sorting
+GET https://{{host}}/api/performance?sortBy=Grade&sortDirection=desc
+
+### Get performances with multiple filters
+GET https://{{host}}/api/performance?search=john&course=1&page=1&pageSize=5&sortBy=SubmittedOn&sortDirection=desc
